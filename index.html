@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+	<link rel="icon"
+		href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/441px-WhatsApp_logo-color-vertical.svg.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>BoolZap</title>
+</head>
+
+<body>
+
+	<div class="container clearfix">
+
+		<header class="clearfix">
+
+
+			<!-- header left (login)-->
+			<div class="header-left float">
+
+				<img src="https://image.flaticon.com/icons/svg/3189/3189525.svg" alt="">
+
+
+
+				<div class="header-left-icon">
+
+
+					<a href="#"><i class="fas fa-circle-notch"></i></a>
+					<a href="#"><i class="fas fa-comment-alt"></i></a>
+					<a href="#"><i class="fas fa-ellipsis-v"></i></a>
+				</div>
+			</div>
+			<!-- end header left -->
+
+			<!-- header right (ultimo accesso)-->
+			<div class="header-right float">
+
+				<div class="header-right-login">
+					<img class="ultimo-accesso-avatar" src="https://image.flaticon.com/icons/svg/3231/3231653.svg"
+						alt="">
+					<div class="ultimo-accesso">
+						<p class="ultimo-accesso-text">Paolo</p>
+						<p>Ultimo accesso ore <span class="ultimo-accesso-time">08:30</span></p>
+					</div>
+				</div>
+
+
+				<div class="header-right-icon">
+					<a href="#"><i class="fas fa-search"></i></a>
+					<a href="#"><i class="fas fa-paperclip"></i></a>
+					<a href="#"><i class="fas fa-ellipsis-v"></i></a>
+
+				</div>
+			</div>
+
+			<!-- end header right -->
+
+
+		</header>
+
+
+
+		<!-- colonna di sx -->
+		<section class="column-left float">
+
+			<!-- colonna sinistra (notifiche) -->
+			<div class="aside-top">
+				<div class='bell'>
+					<a href="#"><i class="fas fa-bell-slash"></i></a>
+				</div>
+				<div class="notifiche">
+					<p>Ricevi notifiche di nuovi messaggi</p>
+					<p>Attiva notifiche desktop</p>
+				</div>
+			</div>
+
+			<!-- colonna sinistra (search) -->
+			<div class="aside-center">
+
+
+				<input type="text" class="search" id="search" placeholder="Cerca o inizia una nuova chat">
+				<i class="fas fa-search"></i>
+			</div>
+
+			<!-- colonna sinistra (contatti) -->
+			<div class="aside-bottom">
+				<div id="no-contact">Nessun risultato per "<span id="no-ins"></span>"</div>
+				<ul>
+
+					<li class="contatti active">
+						<img class="contatto-avatar" src="https://image.flaticon.com/icons/svg/3231/3231653.svg" alt="">
+
+						<div class="contatto">
+							<p class="contatto-name">Paolo</p>
+							<p class="lastSend">Ciao</p>
+						</div>
+						<div class="contatto-time">
+							08:30
+						</div>
+					</li>
+
+					<li class="contatti">
+						<img class="contatto-avatar" src="https://image.flaticon.com/icons/svg/3231/3231618.svg" alt="">
+
+						<div class="contatto">
+							<p class="contatto-name">Davide</p>
+							<p class="lastSend">Mi lasci il numero di Giovanni</p>
+						</div>
+						<div class="contatto-time">
+							16:28
+						</div>
+					</li>
+
+					<li class="contatti">
+						<img class="contatto-avatar" src="https://image.flaticon.com/icons/svg/3231/3231399.svg" alt="">
+
+						<div class="contatto">
+							<p class="contatto-name">Pinuccio</p>
+							<p class="lastSend">Attiva notifiche desktop</p>
+						</div>
+						<div class="contatto-time">
+							12:50
+						</div>
+					</li>
+
+					<li class="contatti">
+						<img class="contatto-avatar" src="https://image.flaticon.com/icons/svg/3189/3189664.svg" alt="">
+
+						<div class="contatto">
+							<p class="contatto-name">Barbara</p>
+							<p class="lastSend">Attiva notifiche desktop</p>
+						</div>
+						<div class="contatto-time">
+							12:50
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</section>
+
+		<!-- fine colonna di sx -->
+
+		<!-- sezione destra -->
+		<section class="column-right float">
+
+			<!-- sezione chat -->
+			<div class="chat active">
+				<div class="bubble received">
+					<p class="bubble-text">Ciao</p>
+					<div class="bubble-time">08:30</div>
+				</div>
+			</div>
+			<div class="chat">
+				<div class="bubble received">
+					<p class="bubble-text">Mi lasci il numero di Giovanni</p>
+					<div class="bubble-time">16:28</div>
+				</div>
+			</div>
+			<div class="chat"></div>
+			<div class="chat"></div>
+
+			<!-- sezione scrivi messaggio -->
+			<div class="write-input">
+				<div class="emoticon">
+					<a href="#"><i class="far fa-smile"></i></a>
+				</div>
+				<div class="write">
+					<input id='input-mes' type="text" placeholder="Scrivi un messaggio">
+				</div>
+				<div class="mic">
+					<a href="#"><i class="fas fa-microphone"></i></a>
+				</div>
+				<div class="fly-message none">
+					<a href="#" id="input-mes-btn"><i class="fas fa-paper-plane"></i></a>
+				</div>
+			</div>
+
+		</section>
+		<!-- fine sezione destra -->
+
+
+		<!-- template bubble (messaggio) -->
+		<div class="template">
+			<div class="bubble">
+				<p class="bubble-text"> </p>
+				<div class="bubble-time"></div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</div>
+	<script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>

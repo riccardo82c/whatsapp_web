@@ -1,0 +1,477 @@
+/* init */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.float {
+	float: left;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* end init */
+
+/* typo */
+
+/* background di ogni sezione */
+header,
+.aside-top,
+.aside-center,
+.aside-bottom,
+.write-input {
+	background-color: #f3fdff;
+}
+
+/*  */
+
+i {
+	font-size: 24px;
+
+}
+
+a {
+	color: #6d8692;
+}
+
+a:hover {
+	color: #2b4450;
+}
+
+p {
+	color: rgb(43, 43, 43);
+}
+
+img {
+	border-radius: 50%;
+	border: 1px solid #5c8396;
+	/* box-shadow: 10px 9px 16px -7px rgb(113, 118, 132); */
+	box-shadow: 10px 9px 8px -10px rgb(113, 118, 132);
+}
+
+input {
+	border: 1px solid #6d8692;
+	box-shadow: inset 1px 1px 2px #6d8692;
+	transition: all .3s ease;
+}
+
+input:focus {
+	background-color: #b5cfdc;
+	box-shadow: 0px 0px 0px 3px #c1f7c1,
+		inset 0px 2px 3px rgba(0, 0, 0, 0.2),
+		0px 5px 5px rgba(0, 0, 0, 0.15);
+	outline: none;
+	border: 1px solid transparent;
+}
+
+.aside-center input:focus~i {
+	color: #c1f7c1;
+}
+
+
+
+.contatto-time,
+.bubble-time {
+	color: #6d8692;
+}
+
+
+.notifiche p:last-child {
+	text-decoration: underline;
+}
+
+.ultimo-accesso p:last-child,
+.notifiche p:last-child,
+.contatto p:last-child {
+	color: #6d8692;
+	font-weight: 200;
+}
+
+.ultimo-accesso p:first-child,
+.notifiche p:first-child,
+.contatto p:first-child {
+	font-weight: 600;
+}
+
+/* end-typo */
+
+/* section GENERALE */
+body {
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	background: linear-gradient(180deg, #0a2836 10%, rgb(112, 135, 147) 72%);
+}
+
+.container {
+	height: 90vh;
+	width: 1200px;
+	margin: 5vh auto;
+
+	box-shadow: 1px 9px 5px -3px rgb(113, 118, 132);
+	border: 1px solid #6d8692;
+}
+
+/* HEADER */
+
+header {
+	height: 75px;
+}
+
+/* header-left */
+
+.header-left {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
+	align-items: center;
+	border-right: 1px solid rgb(231, 229, 229);
+
+
+	/* shadow effect */
+	position: relative;
+	z-index: 2000;
+
+}
+
+
+
+.header-left img {
+	height: 60px;
+}
+
+.header-left-icon i {
+	padding: 0 5px;
+}
+
+
+/* header-right */
+
+.header-right {
+	width: 70%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	/* shadow effect*/
+	box-shadow: -5px 17px 5px -10px rgba(0, 0, 0, 0.62);
+	position: relative;
+	z-index: 1000;
+}
+
+.header-right {
+	padding: 0 5px 0 0;
+}
+
+.header-right-login {
+	height: 75px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+
+.header-right-login img {
+	height: 60px;
+
+}
+
+.header-right-login .ultimo-accesso {
+	height: 75px;
+
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+}
+
+.header-right-icon i {
+
+	padding: 0 5px;
+}
+
+/* COLONNA SX */
+
+section.column-left {
+	height: calc(100% - 75px);
+	width: 30%;
+
+}
+
+/* colonna-sx top */
+.aside-top {
+	height: 70px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	background-color: #b5cfdc;
+
+	/* shadow effect */
+	box-shadow: 7px -1px 2px -2px rgba(0, 0, 0, 0.53);
+}
+
+.aside-top .bell {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background-color: #f3fdff;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.aside-top .notifiche {
+	padding: 10px;
+}
+
+/* end colonna-sx top */
+
+/* colonna-sx center search */
+.aside-center {
+	height: 50px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+
+
+
+	/* shadow effect */
+	position: relative;
+	box-shadow: 4px 8px 6px -4px rgba(143, 143, 143, 0.53),
+		7px -1px 2px -2px rgba(0, 0, 0, 0.53);
+}
+
+.aside-center i {
+	position: absolute;
+	bottom: 10px;
+	font-size: 20px;
+	left: 8px;
+	padding: 5px;
+	color: #6d8692;
+}
+
+.aside-center input {
+	flex: 1 0 auto;
+	height: 30px;
+	padding: 0 5px 0 34px;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* end colonna-sx center search */
+
+/* colonna-sx bottom */
+
+.aside-bottom {
+	overflow-y: auto;
+	height: calc(100% - 120px);
+
+	/* shadow effect */
+	box-shadow: 7px -1px 2px -2px rgba(0, 0, 0, 0.53);
+
+}
+
+.aside-bottom #no-contact {
+	display: none;
+	text-align: center;
+	padding: 10px;
+	color: #436b7f;
+}
+
+.contatti {
+	padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgb(231, 229, 229);
+}
+
+
+.contatti:hover {
+	background-color: #c6d6dfc9;
+	cursor: pointer;
+}
+
+.contatti.active {
+	background-color: #c6d6dfc9;
+}
+
+.contatti img {
+	height: 60px;
+}
+
+.contatto {
+	flex: 1;
+	padding: 10px;
+}
+
+.contatto .lastSend {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.contatto-time {
+	align-self: flex-start
+}
+
+/* fine colonna-sx bottom */
+
+
+/* COLONNA SX */
+
+
+section.column-right {
+	height: calc(100% - 75px);
+	width: 70%;
+	background-color: #8ed9fc96;
+}
+
+/* colonna-dx chat */
+
+
+.chat {
+	overflow-y: auto;
+	height: calc(100% - 50px);
+	padding: 20px 20px 0 20px;
+	display: none;
+	flex-direction: column;
+	background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_9e8a2898faedb7db9bf5638405cf81ae.png');
+	background-color: rgb(92, 131, 150);
+}
+
+/* chat active visibile */
+.chat.active {
+	display: flex;
+}
+
+
+.send {
+
+	align-self: flex-end;
+	background: linear-gradient(325deg, rgba(203, 246, 199, 1) 0%, rgba(159, 245, 193, 1) 100%);
+	/* background-color: rgb(193, 247, 193); */
+}
+
+.received {
+
+	align-self: flex-start;
+	background: linear-gradient(325deg, rgb(177, 216, 232) 0%, rgb(158, 232, 240) 100%);
+	/* background-color: #d1e3eb; */
+}
+
+.bubble {
+	min-width: 20%;
+	max-width: 45%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 9px 5px -3px rgba(0, 0, 0, 0.527);
+}
+
+.bubble .bubble-text {
+	word-wrap: break-word;
+}
+
+.bubble .bubble-time {
+	font-size: 12px;
+	text-align: right;
+}
+
+/* end colonna-dx chat */
+
+/* colonna-dx scrivi messaggio */
+
+.write-input {
+	height: 50px;
+	font-size: 24px;
+	display: flex;
+	justify-content: space-around;
+	border-left: 1px solid rgb(231, 229, 229);
+
+
+
+
+	/* shadow effect */
+	box-shadow: -6px -14px 5px -10px rgba(0, 0, 0, 0.62);
+	position: relative;
+	z-index: 1000;
+}
+
+.write-input .emoticon {
+	flex: 0 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+}
+
+.write-input .write {
+	flex: 1 1 auto;
+	padding: 5px 0;
+}
+
+.write-input .write input {
+	width: 100%;
+	height: 100%;
+	padding: 5px 5px;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+.write-input .mic {
+	flex: 0 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+}
+
+.write-input .fly-message {
+	display: none;
+	padding: 8px 10px;
+}
+
+/* end colonna-dx scrivi messaggio */
+
+
+
+
+
+/* template section for JS */
+
+.template {
+	display: none;
+}
+
+
+
+
+/* try insert f a icon with : before...
+in input don't work*/
+/* input:before {
+	font-family: 'Font Awesome 5 Free';
+	content: "\f002";
+	font-weight: 900;
+
+} */
